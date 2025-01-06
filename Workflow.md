@@ -31,5 +31,35 @@ Auction manager records Thunder's sale:
 ---
 
 #### View Reports:
-Farm owner views auction performance:  
-`"Total Revenue: $50,000, Horses Sold: 5, Horses in Training: 3."`
+Farm owner views auction performance and inventory status:
+
+**Rules for Maintaining Inventory**:
+1. The total number of horses in the field (including those in training, newcomers, and auction) must always be **10**.
+2. If horses sold exceed horses in the field, calculate how many new horses to buy:
+3. Ensure that after purchasing new horses, the total number of horses in the field is restored to **10**.
+
+---
+
+### Example Scenario
+
+#### Current Inventory:
+- Horses in Training: 3  
+- Horses Ready for Auction: 2  
+- Horses Sold: 5
+  - Horses to Buy = Horses Sold - (Horses in Training + Horses Ready for Auction + Newcomers)
+- Newcomers: 0  
+
+#### Calculation:
+
+Since the total number of horses in the field is already **10** (3 in training + 2 ready for auction + 5 newcomers), no new horses need to be purchased.
+
+---
+
+#### Updated Inventory After Purchase:
+- Total Revenue: $50,000
+- Horses Sold: 5
+- Horses in Training: 3
+- Horses Ready for Auction: 2
+- Horses in Field (Total): 10  
+- Newcomers: 0  
+- Horses to Buy: 0  
